@@ -1,0 +1,161 @@
+/* Noodpagina JPets: huisstijl van jpets.nl (oranje en saliegroen op gebroken wit, Shadows Into Light Two + Quicksand) */
+@font-face { font-family: "Shadows Into Light Two"; src: url("shadows-into-light-two-latin-400.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Quicksand"; src: url("quicksand-latin-variabel.woff2") format("woff2"); font-weight: 300 700; font-display: swap; }
+
+:root {
+  --oranje: #EF8958;        /* primaire kleur van de site */
+  --oranje-rand: #C2622F;   /* donkerder oranje voor randen, genoeg contrast op wit */
+  --salie: #B6BD9C;         /* secundaire kleur van de site */
+  --salie-licht: #E9ECDF;
+  --wit: #FDFFF9;           /* accentkleur van de site */
+  --tekst: #161310;         /* tekstkleur van de site */
+  --tekst-zacht: #4A4640;
+  --lijn: rgba(22, 19, 16, .12);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--wit);
+  color: var(--tekst);
+  font: 400 17px/1.7 "Quicksand", system-ui, sans-serif;
+}
+a { color: var(--tekst); text-decoration-color: var(--oranje); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid var(--tekst); outline-offset: 3px; }
+h1, h2 { font-family: "Shadows Into Light Two", "Comic Sans MS", cursive; font-weight: 400; margin: 0; letter-spacing: 1.5px; line-height: 1.15; }
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--tekst-zacht);
+  font-size: 15px;
+  font-weight: 700;
+}
+.ondertitel { margin: 10px 0 0; font-size: 18px; font-weight: 600; color: var(--tekst-zacht); }
+
+/* Kop */
+.hero {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 32px 16px 56px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 0 0, rgba(182, 189, 156, .35) 0 160px, transparent 161px),
+    radial-gradient(circle at 100% 100%, rgba(239, 137, 88, .16) 0 200px, transparent 201px),
+    var(--wit);
+}
+.hero__inhoud { width: 100%; max-width: 780px; }
+.logo { width: 240px; max-width: 62vw; height: auto; display: block; margin: 0 auto 18px; }
+@media (max-width: 719px) {
+  .hero { padding: 20px 16px 40px; }
+  .logo { width: 170px; margin-bottom: 12px; }
+  .melding { margin-top: 16px; font-size: 17px; }
+  .knoppen { margin-top: 22px; gap: 10px; }
+}
+.hero h1 { font-size: clamp(40px, 8vw, 72px); color: var(--tekst); }
+
+.melding {
+  margin: 22px auto 0;
+  max-width: 600px;
+  font-size: 18px;
+}
+.melding p { margin: 0 0 6px; }
+.melding strong { font-weight: 700; box-shadow: inset 0 -.45em 0 rgba(239, 137, 88, .35); }
+
+/* Actieknoppen */
+.knoppen {
+  display: grid;
+  gap: 12px;
+  margin-top: 30px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .knoppen { grid-template-columns: 1.2fr 1fr 1fr; }
+}
+.knop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 68px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  text-align: left;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.2;
+  color: var(--tekst);
+  transition: transform .15s ease, background-color .15s ease;
+}
+.knop:hover { transform: translateY(-2px); }
+@media (max-width: 719px) {
+  .knop { justify-content: center; text-align: center; }
+}
+.knop svg { width: 26px; height: 26px; flex: none; fill: currentColor; }
+.knop small { display: block; font-weight: 600; font-size: 13px; margin-bottom: 2px; }
+.knop--oranje { background: var(--oranje); }
+.knop--oranje:hover { background: #F39C72; }
+.knop--rand { border: 2px solid var(--oranje-rand); background: #fff; }
+.knop--rand:hover { background: var(--salie-licht); }
+
+/* Informatie op saliegroen */
+.info-vlak { background: var(--salie); }
+.info { max-width: 1000px; margin: 0 auto; padding: 56px 16px 40px; }
+.kaarten { display: grid; gap: 20px; }
+@media (min-width: 760px) { .kaarten { grid-template-columns: 1fr 1fr; } }
+.kaart {
+  background: var(--wit);
+  border-radius: 24px;
+  padding: 28px 26px;
+  box-shadow: 0 10px 30px rgba(22, 19, 16, .08);
+}
+.kaart h2 { font-size: clamp(32px, 5vw, 40px); margin-bottom: 16px; }
+.kaart p { margin: 0 0 12px; }
+.kaart--foto { padding: 0; overflow: hidden; }
+.foto { display: block; width: 100%; height: auto; aspect-ratio: 640 / 424; object-fit: cover; }
+.kaart__tekst { padding: 22px 26px 26px; }
+
+.diensten { list-style: none; margin: 0; padding: 0; }
+.diensten li { padding: 10px 0 10px 18px; border-bottom: 1px solid var(--lijn); position: relative; }
+.diensten li:last-child { border-bottom: 0; }
+.diensten li::before { content: ""; position: absolute; left: 0; top: 19px; width: 8px; height: 8px; border-radius: 50%; background: var(--oranje); }
+.diensten strong { display: block; font-weight: 700; }
+
+.klein { font-size: 15px; color: var(--tekst-zacht); }
+.klein strong { color: var(--tekst); }
+.contactregel { margin: 16px 0 0; font-size: 18px; line-height: 1.9; font-weight: 700; }
+
+.sociaal { text-align: center; margin: 32px 0 0; }
+
+.voet { background: var(--tekst); color: var(--wit); text-align: center; padding: 22px 16px; font-size: 14px; letter-spacing: .02em; }
+.voet p { margin: 0; }
+@media (max-width: 719px) { .voet { padding-bottom: 92px; } } /* ruimte voor de actiebalk */
+
+/* Vaste actiebalk onderaan op de telefoon */
+/* Verschijnt pas als de grote knoppen uit beeld zijn gescrold, zodat ze nooit dubbel staan */
+.balk {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  transform: translateY(110%); transition: transform .2s ease;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(253, 255, 249, .97);
+  border-top: 1px solid var(--lijn);
+  box-shadow: 0 -6px 20px rgba(22, 19, 16, .08);
+}
+.balk.is-zichtbaar { transform: none; }
+.balk__knop {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 50px; border-radius: 999px;
+  border: 2px solid var(--oranje-rand); color: var(--tekst); background: #fff;
+  font-weight: 700; text-decoration: none;
+}
+.balk__knop--oranje { background: var(--oranje); border-color: var(--oranje); }
+@media (min-width: 720px) {
+  .balk { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knop, .balk { transition: none; }
+  .knop:hover { transform: none; }
+}

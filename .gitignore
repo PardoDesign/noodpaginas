@@ -1,0 +1,7 @@
+# Nooit backups of uitgepakte sitekopieen in deze repo: daar zit klantdata in.
+*.wpress
+*.tar
+*.sql
+*.zip
+uitpak/
+.impeccable/
