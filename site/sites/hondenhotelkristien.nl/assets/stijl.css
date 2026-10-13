@@ -37,13 +37,12 @@ h1, h2, h3 { font-family: "Quicksand", "DM Sans", system-ui, sans-serif; font-we
 }
 .skiplink:focus { top: 12px; }
 
+.ondertitel { margin: 12px 0 0; font-size: 19px; font-weight: 600; color: var(--rood); }
 .eyebrow {
   margin: 0 0 8px;
   color: var(--rood);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: .22em;
-  text-transform: uppercase;
 }
 
 /* Kop met het pootjespatroon van de site */

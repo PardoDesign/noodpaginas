@@ -36,12 +36,11 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; 
 }
 .skip:focus { top: 12px; }
 
+.ondertitel { margin: 12px 0 0; font-size: 19px; font-weight: 600; color: var(--wit); }
 .eyebrow {
   margin: 0 0 10px;
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: .18em;
-  text-transform: uppercase;
   color: var(--wit);
 }
 .eyebrow--rood { color: var(--bordeaux); }
@@ -118,7 +117,6 @@ h1, h2, h3 { font-family: "Playfair Display", Georgia, serif; font-weight: 600; 
 .kaart {
   background: var(--wit);
   border: 1px solid var(--lijn);
-  border-top: 4px solid var(--bordeaux);
   border-radius: 6px;
   padding: 28px 24px;
   text-align: left;
