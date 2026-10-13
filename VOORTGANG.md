@@ -33,3 +33,8 @@ en "En maak voor alle andere sites die eruit liggen ook zo iets" (zoals de noodp
 - Alle vijf voorbeelden staan. Live per site pas na "zet live": domeinen apex+www aan app
   f0c5dbcowj2g3xsafmpft98o, uitrollen, DNS omzetten, certificaat meten.
 - Open vragen: hondenhotel WhatsApp zelfde nummer?; houth grote routeknop weg (op afspraak)?
+
+## Stand 13-10 21:10
+- hondenhotelkristien.nl, www en reserveren. LIVE op de noodpagina (geldig cert, knop Reserveren naar Aniday, statustijd hersteld).
+- Andere vier staan klaar als voorbeeld; draaiboek: C:\MiCasa\docs\runbook-noodpagina-bij-storing.md.
+- Volgende: hondenhotel terugzetten zodra mijn.host de site terug heeft; Temp\nood-* mappen opruimen.
