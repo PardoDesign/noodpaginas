@@ -18,3 +18,18 @@ en "En maak voor alle andere sites die eruit liggen ook zo iets" (zoals de noodp
 2. Nakijken, GitHub-repo, Coolify-app met de voorbeeldadressen, laten zien.
 3. Live pas na "zet live" plus DNS-wissel (A apex en www naar 76.13.146.46, AAAA weg, MX laten staan).
    DNS zelf kan alleen als IP 145.53.145.203 op de whitelist van de mijn.host API-sleutel staat.
+
+## Stand 13-10 (later)
+- Repo github.com/PardoDesign/noodpaginas (public), Coolify-project noodpaginas (1deg3n1beb9cqn1d93utckpe),
+  app f0c5dbcowj2g3xsafmpft98o. Voorbeelden werken (503 + noindex): nood-hondenhotel, nood-yescarwash,
+  nood-jpets, nood-houthdiensten .pardodesign.app. materprojecten nog in aanbouw.
+- yescare.nl valt af: nooit een site gehad (alleen Plesk-standaardpagina en mail).
+- Santiago: Route en Mail als kleine iconen, lokaal gecommit 34a95d4, wacht op "zet live".
+- Uitgepakte backups met klantdata in C:\Users\Admin\AppData\Local\Temp\nood-* : weggooien na afloop.
+
+## Stand 13-10 (eind)
+- materprojecten.nl af, gepusht en uitgerold: nood-materprojecten.pardodesign.app geeft 503 + noindex.
+  Gegevens uit de backup van maart 2025 (Kerkeland 21 Echteld, 06 20 11 44 75): eigenaar laat Mark bevestigen.
+- Alle vijf voorbeelden staan. Live per site pas na "zet live": domeinen apex+www aan app
+  f0c5dbcowj2g3xsafmpft98o, uitrollen, DNS omzetten, certificaat meten.
+- Open vragen: hondenhotel WhatsApp zelfde nummer?; houth grote routeknop weg (op afspraak)?
