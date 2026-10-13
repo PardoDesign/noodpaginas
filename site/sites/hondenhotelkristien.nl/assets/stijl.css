@@ -107,6 +107,7 @@ h1, h2, h3 { font-family: "Quicksand", "DM Sans", system-ui, sans-serif; font-we
 }
 .knop svg { width: 26px; height: 26px; flex: none; fill: currentColor; }
 .knop small { display: block; font-weight: 500; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; opacity: .85; margin-bottom: 2px; }
+.knop--breed { grid-column: 1 / -1; }
 .knop--vol { background: var(--rood); color: var(--wit); box-shadow: 0 6px 18px rgba(155, 35, 33, .25); }
 .knop--vol:hover { background: var(--rood-donker); }
 .knop--rand { border: 2px solid var(--rood); color: var(--rood); background: var(--wit); }

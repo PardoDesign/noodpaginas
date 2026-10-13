@@ -38,7 +38,7 @@
   }
   if (!tekst) {
     var morgen = (dag + 1) % 7;
-    tekst = "Morgen (" + namen[morgen] + ") weer bereikbaar vanaf " + tijd(tijden[morgen][0]);
+    tekst = "Morgen (" + namen[morgen] + ") weer bereikbaar vanaf " + tijd(tijden[morgen][0][0]);
   }
 
   var el = document.getElementById("status");
