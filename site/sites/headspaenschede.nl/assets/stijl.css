@@ -1,0 +1,261 @@
+/* Noodpagina Head Spa Enschede: huisstijl van headspaenschede.nl (Philosopher en DM Sans, taupe #CCBDAF op warm wit #F8F6F2) */
+
+@font-face {
+  font-family: "Philosopher";
+  src: url("philosopher-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Philosopher";
+  src: url("philosopher-latin-700-normal.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "DM Sans";
+  src: url("dm-sans-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --kop-gewicht: 700;
+  --focus: #222222;
+  --knop-hoek: 16px;
+  --hoek: 16px;
+  --kaart: #FFFFFF;
+  --lijn: #E8E1D8;
+  --rand-bg: rgba(0, 0, 0, .18);
+  --rand-hover: rgba(0, 0, 0, .32);
+  --donker-tekst: #E6DED5;
+  --donker-kop: #FFFFFF;
+  --donker-label: #BDB2A7;
+  --chip-bg: #EFE8E0;
+  --chip-tekst: #222222;
+  --balk-rand: rgba(255, 255, 255, .5);
+  --balk-tekst: #FFFFFF;
+  --letter-tekst: "DM Sans", system-ui, sans-serif;
+  --letter-kop: "Philosopher", Georgia, serif;
+  --pagina: #F8F6F2;
+  --tekst: #222222;
+  --kop: #222222;
+  --link: #222222;
+  --focus-hero: #FFFFFF;
+  --accent: #222222;
+  --hero-bg: linear-gradient(rgba(25, 20, 16, .58), rgba(25, 20, 16, .72)), url("sfeer.webp") center / cover no-repeat;
+  --hero-bg-klein: linear-gradient(rgba(25, 20, 16, .58), rgba(25, 20, 16, .72)), url("sfeer-800.webp") center / cover no-repeat;
+  --hero-kop: #FFFFFF;
+  --hero-zacht: #EFE8E0;
+  --logo-breed: 300px;
+  --hoofd: #CCBDAF;
+  --hoofd-tekst: #222222;
+  --hoofd-hover: #DCCFC3;
+  --rand: rgba(255, 255, 255, .75);
+  --rand-tekst: #FFFFFF;
+  --donker: #222222;
+  --donker-accent: #CCBDAF;
+  --voet-bg: #CCBDAF;
+  --voet-tekst: #222222;
+  --balk-bg: #222222;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--pagina);
+  color: var(--tekst);
+  font: 400 16px/1.7 var(--letter-tekst);
+}
+a { color: var(--link); }
+a:focus-visible, .knop:focus-visible, .balk__knop:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+h1, h2, h3 { font-family: var(--letter-kop); font-weight: var(--kop-gewicht); margin: 0; color: var(--kop); line-height: 1.2; }
+
+.hero .knop:focus-visible { outline-color: var(--focus-hero, var(--focus)); }
+
+.skip {
+  position: absolute; left: 12px; top: -60px; z-index: 20;
+  padding: 10px 16px; background: #FFFFFF; color: #111111;
+  border-radius: 4px; font-weight: 600;
+}
+.skip:focus { top: 12px; }
+
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 40px 16px 56px;
+  text-align: center;
+  color: var(--hero-zacht);
+  background: var(--hero-bg);
+}
+.hero__inhoud { width: 100%; max-width: 780px; }
+@media (max-width: 800px) { .hero { background: var(--hero-bg-klein, var(--hero-bg)); } }
+.logo { width: min(var(--logo-breed), 74vw); height: auto; display: block; margin: 0 auto 30px; }
+.kader { display: inline-block; padding: 6px 0; }
+.slogan { margin: 0 0 10px; font-size: 17px; color: var(--hero-zacht); }
+.hero h1 { font-size: clamp(34px, 7.4vw, 64px); color: var(--hero-kop); letter-spacing: -.5px; }
+
+.melding {
+  margin: 26px auto 0;
+  max-width: 620px;
+  font-size: 17px;
+  color: var(--hero-zacht);
+}
+.melding p { margin: 0 0 6px; }
+.melding strong { color: var(--hero-kop); font-weight: 700; }
+
+/* Actieknoppen */
+.knoppen { display: grid; gap: 12px; margin: 32px auto 0; grid-template-columns: 1fr; }
+.knoppen--1 { max-width: 420px; }
+@media (min-width: 720px) {
+  .knoppen--2 { grid-template-columns: 1fr 1fr; max-width: 640px; }
+  .knoppen--3 { grid-template-columns: 1.35fr 1fr 1fr; }
+  .knoppen--4 { grid-template-columns: 1fr 1fr; max-width: 640px; }
+}
+.knop {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-height: 68px;
+  padding: 12px 22px;
+  border-radius: var(--knop-hoek);
+  text-decoration: none;
+  text-align: left;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.knop:hover { transform: translateY(-2px); }
+@media (max-width: 719px) {
+  .knop { justify-content: center; text-align: center; }
+}
+.knop svg { width: 26px; height: 26px; flex: none; fill: currentColor; }
+.knop span { min-width: 0; overflow-wrap: anywhere; }
+.knop small { display: block; font-weight: 500; font-size: 12px; opacity: .85; margin-bottom: 3px; }
+.knop--hoofd { background: var(--hoofd); color: var(--hoofd-tekst); border: 2px solid var(--hoofd); }
+.knop--hoofd:hover { background: var(--hoofd-hover); border-color: var(--hoofd-hover); }
+.knop--rand { border: 2px solid var(--rand); color: var(--rand-tekst); background: var(--rand-bg); }
+.knop--rand:hover { background: var(--rand-hover); }
+
+/* Informatie */
+.info { max-width: 1040px; margin: 0 auto; padding: 64px 16px 32px; }
+.info h2 { font-size: clamp(28px, 4.6vw, 36px); margin-bottom: 20px; }
+
+.diensten { margin-bottom: 48px; }
+.tegels { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+@media (min-width: 640px) { .tegels--2, .tegels--4 { grid-template-columns: 1fr 1fr; } .tegels--3 { grid-template-columns: repeat(3, 1fr); } }
+.tegel {
+  background: var(--kaart);
+  border: 1px solid var(--lijn);
+  border-radius: var(--hoek);
+  padding: 22px 20px;
+}
+.tegel h3 { font-size: 20px; margin-bottom: 8px; }
+.tegel p { margin: 0; font-size: 15px; }
+
+.kaarten { display: grid; gap: 20px; }
+@media (min-width: 800px) { .kaarten { grid-template-columns: 1fr 1fr; } }
+.kaarten--enkel { max-width: 620px; margin: 0 auto; }
+@media (min-width: 800px) { .kaarten--enkel { grid-template-columns: 1fr; } }
+.kaart {
+  background: var(--kaart);
+  border: 1px solid var(--lijn);
+  border-radius: var(--hoek);
+  padding: 30px 26px;
+}
+.kaart p { margin: 0 0 12px; }
+.kaart h3 { font-size: 18px; margin: 18px 0 6px; }
+.kaart--donker { background: var(--donker); border-color: var(--donker); color: var(--donker-tekst); }
+.kaart--donker h2 { color: var(--donker-kop); }
+.kaart--donker .eyebrow { color: var(--donker-accent); }
+.kaart--donker a { color: var(--donker-kop); }
+
+.chips { list-style: none; margin: 0 0 14px; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chips li {
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--chip-bg);
+  color: var(--chip-tekst);
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.klein { font-size: 15px; margin: 0 0 18px; }
+.contactlijst { list-style: none; margin: 0; padding: 0; }
+.contactlijst li {
+  display: grid;
+  grid-template-columns: 104px 1fr;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+  font-size: 17px;
+  overflow-wrap: anywhere;
+}
+.contactlijst span { color: var(--donker-label); font-size: 14px; padding-top: 2px; }
+.contactlijst a { text-decoration: none; font-weight: 600; }
+.contactlijst a:hover { text-decoration: underline; }
+address { font-style: normal; }
+
+.sociaal { text-align: center; margin: 40px 0 0; }
+.sociaal a { font-weight: 700; }
+
+.voet {
+  background: var(--voet-bg);
+  text-align: center;
+  padding: 22px 16px;
+  font-size: 13px;
+  color: var(--voet-tekst);
+}
+.voet p { margin: 0; }
+.met-balk .voet { padding-bottom: 22px; }
+@media (max-width: 719px) { .met-balk .voet { padding-bottom: 92px; } } /* ruimte voor de actiebalk */
+
+/* Vaste actiebalk onderaan op de telefoon */
+/* Verschijnt pas als de grote knoppen uit beeld zijn gescrold, zodat ze nooit dubbel staan */
+.balk {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  transform: translateY(110%); transition: transform .2s ease;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom));
+  background: var(--balk-bg);
+  border-top: 1px solid rgba(255, 255, 255, .12);
+}
+.balk--1 { grid-template-columns: 1fr; }
+.balk.is-zichtbaar { transform: none; }
+.balk__knop {
+  display: flex; align-items: center; justify-content: center;
+  min-height: 50px; border-radius: var(--knop-hoek);
+  border: 2px solid var(--balk-rand); color: var(--balk-tekst);
+  font-weight: 700; text-decoration: none;
+}
+.balk__knop--hoofd { background: var(--hoofd); border-color: var(--hoofd); color: var(--hoofd-tekst); }
+@media (min-width: 720px) {
+  .balk { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .knop, .balk { transition: none; }
+  .knop:hover { transform: none; }
+}

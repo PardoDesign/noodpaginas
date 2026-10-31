@@ -38,3 +38,13 @@ en "En maak voor alle andere sites die eruit liggen ook zo iets" (zoals de noodp
 - hondenhotelkristien.nl, www en reserveren. LIVE op de noodpagina (geldig cert, knop Reserveren naar Aniday, statustijd hersteld).
 - Andere vier staan klaar als voorbeeld; draaiboek: C:\MiCasa\docs\runbook-noodpagina-bij-storing.md.
 - Volgende: hondenhotel terugzetten zodra mijn.host de site terug heeft; Temp\nood-* mappen opruimen.
+
+## Stand 01-11
+- 12 nieuwe noodpagina's (opdracht eigenaar 31-10: "voor alle actieve websites"): boeking.app, dlylatrishias.nl,
+  headspaenschede.nl, hrbexpress.nl, loslocos.nl, petipedia.nl, taxidegroenebetuwe.nl, werkenbij.taxienmeer.nl,
+  planning.taxienmeer.nl, yesfit.nu, ziekenvervoer.nl, zillio.nl. Contact alleen wat de live site zelf toont.
+- Voorbeelden: nood-boeking, nood-dlylatrishias, nood-headspa, nood-hrbexpress, nood-loslocos, nood-petipedia,
+  nood-taxidegroenebetuwe, nood-werkenbij, nood-planning, nood-yesfit, nood-ziekenvervoer, nood-zillio
+  (.pardodesign.app). Geen enkele echte klantsite omgezet.
+- Omzetten per site: zie C:\MiCasa\docsunbook-noodpagina-bij-storing.md (VPS-sites hebben een route buiten de VPS nodig).
+

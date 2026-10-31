@@ -7,6 +7,10 @@ Gegevens komen alleen uit de eigen publieke site van de klant (kopie of Wayback)
 
 Voorbeeldadressen (noindex): `nood-<naam>.pardodesign.app`, zie `site/nginx.conf`.
 
+Sinds 01-11-2026 staat er voor elke actieve website een noodpagina klaar (eigenaar 31-10). Waar de site
+niet bij mijn.host draait (VPS of Cloudflare), staat de omzetstap per site in
+`C:\MiCasa\docsunbook-noodpagina-bij-storing.md`; de stappen hieronder gelden alleen voor mijn.host-sites.
+
 ## Live zetten per domein
 1. Domein toevoegen aan de Coolify-app (https://<domein> en https://www.<domein>), opnieuw uitrollen.
 2. DNS bij mijn.host: A van apex en www naar 76.13.146.46, AAAA van apex en www weg. MX, mail en * laten staan.
